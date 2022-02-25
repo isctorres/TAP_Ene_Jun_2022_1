@@ -99,5 +99,3 @@ public class Loteria extends Stage implements EventHandler {
         System.out.println("Mi primer evento Fovifest :)");
     }
 }
-
-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
