@@ -27,16 +27,22 @@ public class Main extends Application {
         menCompetencia2 = new Menu("Competencia 2");
         mnbPrincipal.getMenus().addAll(menCompetencia1,menCompetencia2);
 
-        vBox.getChildren().add(mnbPrincipal);
+        mitLoteria = new MenuItem("Loteria");
+        mitLoteria.setOnAction(event -> Eventos(1));
+        menCompetencia1.getItems().addAll(mitLoteria);
 
+        vBox.getChildren().add(mnbPrincipal);
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(vBox, 300, 275));
         primaryStage.show();
         primaryStage.setMaximized(true);
+    }
 
-
-
+    private void Eventos(int i) {
+        switch(i){
+            case 1: new Loteria(); break;
+        }
     }
 
 
