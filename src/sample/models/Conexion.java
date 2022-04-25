@@ -14,7 +14,7 @@ public class Conexion {
     public static void crearConexion(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://"+server+":3306/"+bd,user,pwd);
+            conexion = DriverManager.getConnection("jdbc:mysql://"+server+":3306/"+bd+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",user,pwd);
             System.out.println("Conexion a la bd establecida....");
         } catch (Exception e) {
             e.printStackTrace();
