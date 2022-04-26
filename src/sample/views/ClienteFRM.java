@@ -45,7 +45,10 @@ public class ClienteFRM extends Stage {
             objC.setNomcte(txtNombre.getText());
             objC.setTelcte(txtTelefono.getText());
             objC.setDircte(txtDireccion.getText());
-            objC.INSERTAR();
+            if( objC.getCvecte() > 0 )
+                objC.ACTUALIZAR();
+            else
+                objC.INSERTAR();
 
             tbvClientes.setItems(objC.SELECCIONAR());
             tbvClientes.refresh();

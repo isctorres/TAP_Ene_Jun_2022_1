@@ -59,7 +59,7 @@ public class ClientesDAO {
 
     public void ACTUALIZAR(){
         String query = "UPDATE tblclientes SET nomcte='"+this.nomcte+"',telcte='"+this.telcte+"'," +
-                "directe='"+this.dircte+"' WHERE cvecte = "+this.cvecte;
+                "dircte='"+this.dircte+"' WHERE cvecte = "+this.cvecte;
         try {
             Statement stmt = Conexion.conexion.createStatement();
             stmt.executeUpdate(query);

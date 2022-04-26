@@ -13,6 +13,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import sample.components.Corredor;
 import sample.models.Conexion;
 import sample.views.ClientesBD;
 import sample.views.Loteria;
@@ -65,6 +66,12 @@ public class Main extends Application implements EventHandler{
 
         // Abrir la conexion a la base de datos de manera global
         Conexion.crearConexion();
+
+        new Corredor("Correcaminos").start();
+        new Corredor("Alfredo Adame").start();
+        new Corredor("Speedy Gonzalez").start();
+        new Corredor("Darth Vader").start();
+        new Corredor("Pedrito Sola").start();
     }
 
     private void Eventos(int i) {
